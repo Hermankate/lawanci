@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-)(#5+@4p-j_)d+_6rc^5fsi+t2c*x!ow-ed#x@skuhravg5mtg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hermankatende.pythonanywhere.com', 'localhost', '127.0.0.1']
+
+
 
 
 # Application definition
@@ -131,6 +133,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
+MEDIA_URL = '/media/'
+MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
 
 # paypal configurations for making donations
 PAYPAL_RECIEVER_EMAIL = 'hermankats16@gmail.com'# email required to be put
