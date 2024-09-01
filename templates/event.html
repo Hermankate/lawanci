@@ -46,7 +46,7 @@
                         <div class="top-bar-right">
                             <div class="social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/lawancingo?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
                                 <a href=""><i class="fab fa-linkedin-in"></i></a>
                                 <a href=""><i class="fab fa-instagram"></i></a>
                             </div>
@@ -69,7 +69,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
                         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                        <a href="{% url 'causes' %}" class="nav-item nav-link">Causes</a>
+                        <a href="{% url 'causes' %}" class="nav-item nav-link">Pictorial</a>
                         <a href="{% url 'event' %}" class="nav-item nav-link active">Events</a>
                         <a href="{% url 'blog' %}" class="nav-item nav-link">Blog</a>
                         <div class="nav-item dropdown">
@@ -115,21 +115,61 @@
                     <h2>Be ready for our upcoming charity events</h2>
                 </div>
                 <div class="row">
+                    {% for event in events %}
                     <div class="col-lg-6">
                         <div class="event-item">
-                            <img src="{% static 'img/event-1.jpg' %}" alt="Image">
+                            <img src="{{ event.image.url }}" alt="Image"> <!-- Dynamically load the image -->
+                            <div class="event-content">
+                                <div class="event-meta">
+                                    <p><i class="fa fa-calendar-alt"></i>{{ event.event_date }}</p> <!-- Display event date -->
+                                    <p><i class="far fa-clock"></i>{{ event.event_time }}</p> <!-- Display event time -->
+                                    <p><i class="fa fa-map-marker-alt"></i>{{ event.location }}</p> <!-- Display event location -->
+                                </div>
+                                <div class="event-text">
+                                    <h3>{{ event.title }}</h3> <!-- Display event title -->
+                                    <p>
+                                        {{ event.description }} <!-- Display event description -->
+                                    </p> 
+                                    <a class="btn btn-custom" href="">Read More</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="{% static 'img/carousel-7.png' %}" alt="Image">
                             <div class="event-content">
                                 <div class="event-meta">
                                     <p><i class="fa fa-calendar-alt"></i>01-Jan-45</p>
                                     <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                                    <p><i class="fa fa-map-marker-alt"></i>New York</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>Juba</p>
                                 </div>
                                 <div class="event-text">
-                                    <h3>Lorem ipsum dolor sit</h3>
+                                    <h3>Humanitarian asistance </h3>
                                     <p>
-                                        Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                                        Providing Humanitarian assistance to the orphans and young children
                                     </p>
-                                    <a class="btn btn-custom" href="">Join Now</a>
+                                    <a class="btn btn-custom" href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="{% static 'img/event-7.jpg' %}" alt="Image">
+                            <div class="event-content">
+                                <div class="event-meta">
+                                    <p><i class="fa fa-calendar-alt"></i>01-Jan-45</p>
+                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>Gogrial in Kuajok</p>
+                                </div>
+                                <div class="event-text">
+                                    <h3>Advocacy Training</h3>
+                                    <p>
+                                       Women  advocacy groups traing in Gogrial in Kuajok                                  </p>
+                                    <a class="btn btn-custom" href="">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -141,52 +181,14 @@
                                 <div class="event-meta">
                                     <p><i class="fa fa-calendar-alt"></i>01-Jan-45</p>
                                     <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                                    <p><i class="fa fa-map-marker-alt"></i>New York</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>Gogrial</p>
                                 </div>
                                 <div class="event-text">
-                                    <h3>Lorem ipsum dolor sit</h3>
+                                    <h3>Schools Reachout </h3>
                                     <p>
-                                        Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                                        School reachouts in Gogrial providing school materials for the young children
                                     </p>
-                                    <a class="btn btn-custom" href="">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{% static 'img/event-1.jpg' %}" alt="Image">
-                            <div class="event-content">
-                                <div class="event-meta">
-                                    <p><i class="fa fa-calendar-alt"></i>01-Jan-45</p>
-                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                                    <p><i class="fa fa-map-marker-alt"></i>New York</p>
-                                </div>
-                                <div class="event-text">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                                    </p>
-                                    <a class="btn btn-custom" href="">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="event-item">
-                            <img src="{% static 'img/event-2.jpg' %}" alt="Image">
-                            <div class="event-content">
-                                <div class="event-meta">
-                                    <p><i class="fa fa-calendar-alt"></i>01-Jan-45</p>
-                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                                    <p><i class="fa fa-map-marker-alt"></i>New York</p>
-                                </div>
-                                <div class="event-text">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                                    </p>
-                                    <a class="btn btn-custom" href="">Join Now</a>
+                                    <a class="btn btn-custom" href="">Read More </a>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +232,7 @@
                                 <h3><a href="#">Ladies Project</a></h3>
                                 <p>
                                     Lanched a ladies project for learning catering skills so that they can earn from it.
-                                    The project was a success and we are looking forward to more projects
+                                    The project was a success 
                                 </p>
                             </div>
                             <div class="blog-meta">
@@ -245,9 +247,9 @@
                                 <img src="{% static 'img/blog-6.jpg' %}" alt="Image">
                             </div>
                             <div class="blog-text">
-                                <h3><a href="#">Consultive Meeting</a></h3>
+                                <h3><a href="#">Consultative Meeting</a></h3>
                                 <p>
-                                    We had a consultive meeting with the community members to discuss the way forward for the organization. 
+                                    We had a consultative meeting with the community members to discuss the way forward for the organization. 
                                 </p>
                             </div>
                             <div class="blog-meta">
@@ -339,6 +341,7 @@
                             </div>
                         </div>
                     </div>
+                   
                     <div class="col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img">
@@ -348,6 +351,113 @@
                                 <h3><a href="#">Women Projects</a></h3>
                                 <p>
                                     Pieces from designs made by ladies at lawanci. Expressing a bost in skill due to our skill development schemes 
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/event-6.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">Workshop</a></h3>
+                                <p>
+                                    We organized a workshop to empower and strengthen women participation in policy making within Juba in November 2023 under the power of voices project
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/event-7.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">Training</a></h3>
+                                <p>
+                                    LAWANCI trained and formed women advocacy groups in greater Gogrial in Kuajok, of Warrap state to do advocacy and lobby.
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/event-8.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">Women Influence Project</a></h3>
+                                <p>
+                                    Training in Tonj South under Empowered Women Influence project
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/event-9.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">Meeting</a></h3>
+                                <p>
+                                    LAWANCI, together with other service providers in the Warrap state, met with the hospital staff of Kuajok Hospital to assess the level of GBV awareness and how related cases(rape, assault, etc) are being handled at the hospital level.
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/event-10.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">Awareness</a></h3>
+                                <p>
+                                    LAWANCI creating S/GBV awareness campaign in the school with school girls in Kuajok
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/event-11.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">Women Influence Project</a></h3>
+                                <p>
+                                    Training in Tonj South under Empowered Women Influence project
                                 </p>
                             </div>
                             <div class="blog-meta">
@@ -374,6 +484,7 @@
 
 
 
+        
         <!-- Footer Start -->
         <div class="footer">
             <div class="container">
@@ -381,8 +492,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-contact">
                             <h2>Our Head Office</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                            <p><i class="fa fa-map-marker-alt"></i>P.O Box 351, Jub Plot No.167, Blipam Road, South Sudan</p>
+                            <p><i class="fa fa-phone-alt"></i>+211(0)915 112 643</p>
                             <p><i class="fa fa-envelope"></i>info@example.com</p>
                             <div class="footer-social">
                                 <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
@@ -428,16 +539,15 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">lawanci.org</a>, All Right Reserved.</p>
                     </div>
                     <div class="col-md-6">
-                        <p>Designed By <a href="#">HES TCH serviices</a></p>
+                        <p>Designed By <a href="#">HES TECH services</a></p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer End -->
-
         <!-- Back to top button -->
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         

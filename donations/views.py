@@ -3,7 +3,7 @@ from  paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
 import uuid
 from django.urls import reverse
-
+from .models import Event
 # Create your views here.
 # index page.
 def index(request):
@@ -49,8 +49,10 @@ def donate(request):
     return render(request,'donate.html', context )
 
 # event page.
+
 def event(request):
-    return render(request,'event.html', {})
+    events = Event.objects.all()  # Fetch all events from the database
+    return render(request, 'event.html', {'events': events})  # Pass events to the template
 
 # service page.
 def service(request):
