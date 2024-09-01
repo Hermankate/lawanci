@@ -70,7 +70,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
                         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                        <a href="{% url 'causes' %}" class="nav-item nav-link">Causes</a>
+                        <a href="{% url 'causes' %}" class="nav-item nav-link">Pictorial</a>
                         <a href="{% url 'event' %}" class="nav-item nav-link">Events</a>
                         <a href="{% url 'blog' %}" class="nav-item nav-link">Blog</a>
                         <div class="nav-item dropdown">
@@ -105,22 +105,22 @@
                                 Bringing hope and nourishment to the future—members of lawanci sharing a meal with the children we care for                            </p>
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="{% url 'donate' %}">Donate Now</a>
-                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/rzupayGYtac?si=sdJe694Z5VCDs_yH" data-target="#videoModal">Watch Video</a>
+                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="{% static 'img/gp.jpg' %}" alt="Image">
+                            <img src="{% static 'img/stakeholders1.jpg' %}" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>Get Involved with helping hand</h1>
                             <p>
-                                United in compassion—men and women coming together to extend a helping hand to those in need.
+                                Stakeholders meeting with women advocacy groups of greater gogrial
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
-                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/rzupayGYtac?si=sdJe694Z5VCDs_yH" data-target="#videoModal">Watch Video</a>
+                                <a class="btn btn-custom" href="{% url 'donate' %}">Donate Now</a>
+                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                                 With every act of kindness, we light up the faces of those who need it most.
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
+                                <a class="btn btn-custom" href="{% url 'donate' %}">Donate Now</a>
                                 <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
@@ -407,12 +407,12 @@
                         </div>
                         <div class="causes-progress">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                    <span>45%</span>
                                 </div>
                             </div>
                             <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
+                                <p><strong>Raised:</strong> $1000</p>
                                 <p><strong>Goal:</strong> $50000</p>
                             </div>
                         </div>
@@ -432,12 +432,12 @@
                         </div>
                         <div class="causes-progress">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                    <span>45%</span>
                                 </div>
                             </div>
                             <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
+                                <p><strong>Raised:</strong> $1000</p>
                                 <p><strong>Goal:</strong> $50000</p>
                             </div>
                         </div>
@@ -455,17 +455,18 @@
                         <div class="causes-img">
                             <img src="{% static 'img/causes-4.jpg' %}" alt="Image">
                         </div>
-                        <div class="causes-progress">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
+                        
+                            <div class="causes-progress">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                        <span>45%</span>
+                                    </div>
+                                </div>
+                                <div class="progress-text">
+                                    <p><strong>Raised:</strong> $1000</p>
+                                    <p><strong>Goal:</strong> $50000</p>
                                 </div>
                             </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div>
                         <div class="causes-text">
                             <h3>Helping street kids</h3>
                             <p>Together, we can make a difference and provide a brighter future for street kids.</p>
@@ -540,7 +541,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="event-item">
-                            <img src="{% static 'img/event-1.jpg' %}" alt="Image">
+                            <img src="{% static 'img/st.jpg' %}" alt="Image">
                             <div class="event-content">
                                 <div class="event-meta">
                                     <p><i class="fa fa-calendar-alt"></i>01-Sept-24</p>
@@ -552,7 +553,7 @@
                                     <p>
                                         We'll be moving to the southern region to help the street kids. Bringing smiles to faces
                                     </p>
-                                    <a class="btn btn-custom" href="">Join Now</a>
+                                    <a class="btn btn-custom" href="">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -571,7 +572,7 @@
                                     <p>
                                         We shall be giving out school requirements to students of Juba academy.
                                     </p>
-                                    <a class="btn btn-custom" href="">Join Now</a>
+                                    <a class="btn btn-custom" href="">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -582,22 +583,22 @@
         <!-- Event End -->
 
 
-        <!-- Team Start -->
-        <div class="team">
+         <!-- Team Start -->
+         <div class="team">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Meet Our Team</p>
-                    <h2>Awesome guys behind our activities</h2>
+                    <p>Board members</p>
+                    <h2>Compassionate Leaders and Changemakers</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="{% static 'img/team-2.jpg' %}" alt="Team Image">
+                                <img src="{% static 'img/holder2.png' %}" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Person Name</h2>
-                                <p>Founder & CEO</p>
+                                <p>Role</p>
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -610,12 +611,11 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-
-                                <img src="{% static 'img/team-2.jpg' %}" alt="Team Image">
+                                <img src="{% static 'img/holder2.png' %}" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Person Name</h2>
-                                <p>Administration assistant</p>
+                                <p>Role</p>
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -628,28 +628,28 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="{% static 'img/team-3.jpg' %}" alt="Team Image">
+                                <img src="{% static 'img/holder2.png' %}" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Person Name</h2>
+                                <p>Role</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{% static 'img/holder2.png' %}" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Person Name </h2>
-                                <p>Chef Advisor</p>
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="{% static 'img/team-4.jpg' %}" alt="Team Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Person Name</h2>
-                                <p>Advisor</p>
+                                <p>Role</p>
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -663,7 +663,6 @@
             </div>
         </div>
         <!-- Team End -->
-        
         
         <!-- Volunteer Start -->
         <div class="volunteer" data-parallax="scroll" data-image-src="{% static 'img/donate.jpg' %}">
@@ -713,6 +712,21 @@
                     <p>Other Staff members</p>
                     <h2>People behind our organization activities</h2>
                 </div>
+                <section style="display: flex;" >
+                    <div style=" width: 100%; max-width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: #fff; margin: 20px auto; text-align: center;">
+                        <!-- Image Section -->
+                        <div style="width: 100%; height: auto;">
+                            <img src="{% static 'img/exec.jpg' %}" alt="Card Image" style="width: 100%; height: auto; display: block;">
+                        </div>
+                        <!-- Content Section -->
+                        <div style="padding: 15px;">
+                            <h3 style="font-size: 18px; font-weight: bold; margin: 10px 0; color: #333;">Executive Director</h3>
+                            <p style="font-size: 14px; color: #777; margin-bottom: 15px;"> Ms.Rose Acindhel serves as the executive director at Lawanci. She oversees most of the activities happening at the organisation</p>
+                           
+                        </div>
+                        
+                    </div>
+                      </section>
                 <div class="owl-carousel testimonials-carousel">
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
@@ -777,20 +791,23 @@
                                <p> <b>Tell no:</b>0922903912</p>
                         </div>
                     </div>
-                    <!-- <div class="testimonial-item">
+                    <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="{% static 'img/testimonial-4.jpg' %}" alt="Image">
+                            <img src="{% static 'img/staff7.jpg' %}" alt="Image">
                             <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
+                                <h3>Ireneo Francis 
+                                </h3>
+                                <p>Program Manager</p>
                             </div>
                         </div>
                         <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
+                            
+                            <p> Mr. Ireno Francis is the program manager  at lawanci</p>
+
+                            <p><b>Email:</b>ireneofrancis2050@gmail.com</p>
+                               <p> <b>Tell no:</b>+211913331144</p>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -884,9 +901,60 @@
                                 <img src="{% static 'img/blog-6.jpg' %}" alt="Image">
                             </div>
                             <div class="blog-text">
-                                <h3><a href="#">Consultive Meeting</a></h3>
+                                <h3><a href="#">Consultative Meeting</a></h3>
                                 <p>
-                                    We had a consultive meeting with the community members to discuss the way forward for the organization.
+                                    We had a consultative meeting with the  members of parliament to  discuss the way forward for the organization.
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/org.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">workshop to empower and strengthen women</a></h3>
+                                <p>
+                                    LAWANCI organized a workshop to empower and strengthen women participation in policy making within juba in November 2023 under the power of voices project
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/work.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">Workshop in Tonj South </a></h3>
+                                <p>
+                                    LAWANCI conducted a workshop in Tonj South to form and strengthen women advocacy groups in the greater tong region of warrap state, and these women later shall be given seed grands to do advocacy and lobby in their region.
+                                </p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="{% static 'img/Picture4.jpg' %}" alt="Image">
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="#">Women Projects </a></h3>
+                                <p>
+                                   Hand made products by lawanci empowered women 
                                 </p>
                             </div>
                             <div class="blog-meta">
@@ -901,6 +969,7 @@
         <!-- Blog End -->
 
 
+
         <!-- Footer Start -->
         <div class="footer">
             <div class="container">
@@ -908,12 +977,12 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-contact">
                             <h2>Our Head Office</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>Munuki Block A2 Bilpam Road, Juba,South Sudan</p>
-                            <p><i class="fa fa-phone-alt"></i>+211 (0) 915 112 643</p>
-                            <p><i class="fa fa-envelope"></i>info@lawanci.org</p>
+                            <p><i class="fa fa-map-marker-alt"></i>P.O Box 351, Jub Plot No.167, Blipam Road, South Sudan</p>
+                            <p><i class="fa fa-phone-alt"></i>+211(0)915 112 643</p>
+                            <p><i class="fa fa-envelope"></i>info@example.com</p>
                             <div class="footer-social">
                                 <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-custom" href="https://www.facebook.com/lawancingo?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
@@ -955,16 +1024,15 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">Lawanci.org</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">lawanci.org</a>, All Right Reserved.</p>
                     </div>
                     <div class="col-md-6">
-                        <p>Designed By <a href="#">HES TCH serviices</a></p>
+                        <p>Designed By <a href="#">HES TECH services</a></p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer End -->
-        
         <!-- Back to top button -->
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         
