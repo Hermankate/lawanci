@@ -62,6 +62,7 @@
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
                 <a href="{% url 'index' %}" class="navbar-brand">LAWANCI</a>
+                
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -405,6 +406,7 @@
                         <div class="causes-img">
                             <img src="{% static 'img/single2.jpg' %}" alt="Image">
                         </div>
+                        
                         <div class="causes-progress">
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
@@ -416,6 +418,7 @@
                                 <p><strong>Goal:</strong> $50000</p>
                             </div>
                         </div>
+                        
                         <div class="causes-text">
                             <h3>Young mothers</h3>
                             <p>Helping the young mothers with accesories that help them in their families. Together lets make a difference in another person's life rewards in heaven </p>
@@ -453,7 +456,7 @@
                     </div>
                     <div class="causes-item">
                         <div class="causes-img">
-                            <img src="{% static 'img/causes-4.jpg' %}" alt="Image">
+                            <img src="{% static 'img/childn.jpg' %}" alt="Image">
                         </div>
                         
                             <div class="causes-progress">
@@ -501,12 +504,12 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="donate-form">
-                            <form>
+                            <form action="{% url 'donate' %}">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
+                                    <input type="text" class="form-control" placeholder="Name"  />
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="email" class="form-control" placeholder="Email"  />
                                 </div>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-custom active">
@@ -520,7 +523,7 @@
                                     </label>
                                 </div>
                                 <div>
-                                    <button class="btn btn-custom"  type="submit">Donate Now</button>
+                                    <button class="btn btn-custom"  href="{% url 'donate' %}" type="submit" >Donate Now</button>
                                 </div>
                             </form>
                         </div>

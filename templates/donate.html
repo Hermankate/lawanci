@@ -10,6 +10,7 @@
 
         <!-- Favicon -->
         <link href="{% static 'img/favicon.ico' %}" rel="icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -61,6 +62,7 @@
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
                 <a href="{% url 'index' %}" class="navbar-brand">lawanci</a>
+                <!-- <p style="color: white;" > <b>legacy for African women and children initiative </b> </p> -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -106,63 +108,127 @@
         </div>
         <!-- Page Header End -->
         
-        
-        <!-- Donate Start -->
-        <div class="donate-form">
-            <form action="{% url 'donate' %}" method="post">
-                <div class="control-group">
-                    <input type="text" class="form-control" name="name" placeholder="Name" required="required" />
-                </div>
-                <div class="control-group">
-                    <input type="email" class="form-control" name="email" placeholder="Email" required="required" />
-                </div>
-        
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-custom active">
-                        <input type="radio" name="amount" value="10" checked> $10
-                    </label>
-                    <label class="btn btn-custom">
-                        <input type="radio" name="amount" value="20"> $20
-                    </label>
-                    <label class="btn btn-custom">
-                        <input type="radio" name="amount" value="30"> $30
-                    </label>
-                </div>
-        
-                <!-- Payment Method Selection -->
-                <div class="control-group mt-4">
-                    <label for="payment-method">Choose Payment Method:</label>
-                    <select id="payment-method" class="form-control" name="payment_method" required>
-                        <option value="paypal">PayPal</option>
-                        <option value="mobile_money">Mobile Money (MTN/Airtel)</option>
-                        <option value="visa">Visa</option>
-                    </select>
-                </div>
-                <!-- Hidden fields for PayPal -->
-                <div id="paypal-fields" class="payment-fields">
-                    <p>You will be redirected to PayPal for payment.</p>
-                </div>
-        
-                <!-- Hidden fields for Mobile Money -->
-                <div id="mobile-money-fields" class="payment-fields" style="display:none;">
-                    <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number" />
-                    <p>Mobile Money Payment Instructions will be sent to your phone.</p>
-                </div>
-        
-                <!-- Hidden fields for Visa -->
-                <div id="visa-fields" class="payment-fields" style="display:none;">
-                    <input type="text" class="form-control" name="card_number" placeholder="Card Number" required="required" />
-                    <input type="text" class="form-control" name="expiry_date" placeholder="Expiry Date (MM/YY)" required="required" />
-                    <input type="text" class="form-control" name="cvv" placeholder="CVV" required="required" />
-                </div>
-        
-                <div>
-                    <button class="btn btn-custom" type="submit">Donate Now</button>
-                </div>
-            </form>
+    <!-- Donate Start -->
+<div class="donate-form">
+    <form action="{% url 'donate' %}" method="post">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-custom active">
+                <input type="radio" name="amount" value="10" checked> $10
+            </label>
+            <label class="btn btn-custom">
+                <input type="radio" name="amount" value="20"> $20
+            </label>
+            <label class="btn btn-custom">
+                <input type="radio" name="amount" value="30"> $30
+            </label>
         </div>
-        
-        <!-- Donate End -->
+
+        <p style="text-align: center;">Anything is warmly welcomed</p>
+
+        <!-- Payment Method Selection -->
+        <div class="control-group mt-4">
+            <label for="payment-method">Choose donation Method:</label>
+            <select id="payment-method" class="form-control" name="payment_method" required>
+                <option value="bank_transfer"> Direct Bank Transfer</option>
+                <option value="paypal">PayPal</option>
+                <option value="mobile_money">Mobile Money (MTN/Airtel)</option>
+                <option value="visa">Visa</option>
+            </select>
+        </div>
+
+        <!-- Bank Transfer Details -->
+        <div id="bank-transfer-fields" class="payment-fields" style="text-align: center;">
+            <h4>Bank Transfer Details:</h4>
+            <p>BANK NAME: Ecobank South Sudan Limited</p>
+            <p>ACCOUNT NAME: Legacy for African Women and Children Initiative <button onclick="copyText('Legacy for African Women and Children Initiative')"><i class="fas fa-copy"></i></button></p>
+            <p>Branch Name: Koita Complex; P.O. Box 150 Juba</p>
+            <p>USD: <b>6940016641</b> <button onclick="copyText('6940016641')"><i class="fas fa-copy"></i></button></p>
+            <p>SSP: <b>0010087702212801</b> <button onclick="copyText('0010087702212801')"><i class="fas fa-copy"></i></button></p>
+            <p>Correspondent Bank: Citibank New York <button onclick="copyText('Citibank New York')"><i class="fas fa-copy"></i></button></p>
+            <p>SWIFT Code: <b>CITIUS33</b> <button onclick="copyText('CITIUS33')"><i class="fas fa-copy"></i></button></p>
+            <p>Beneficiary Bank Name: Ecobank South Sudan Limited</p>
+            <p>Beneficiary Bank SWIFT Code: <b>ECOCSSJB</b> <button onclick="copyText('ECOCSSJB')"><i class="fas fa-copy"></i></button></p>
+            <p>Please include your name and email in the transfer description.</p>
+
+            <!-- Step-by-Step Directions -->
+            <div class="donation-instructions" style="text-align: left; margin-top: 30px;">
+                <h4>Step-by-Step Instructions for Making a Donation via Bank Transfer:</h4>
+                <ol>
+                    <li><strong>Access Your Banking Platform:</strong>
+                        <ul>
+                            <li>Log in to your online banking account <em>or</em></li>
+                            <li>Visit your local bank branch.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Initiate a Bank Transfer:</strong>
+                        <ul>
+                            <li>Select "International Transfer" if donating from outside South Sudan.</li>
+                            <li>Select "Domestic Transfer" if donating within South Sudan.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Enter Beneficiary Details:</strong>
+                        <ul>
+                            <li><b>Bank Name:</b> Ecobank South Sudan Limited</li>
+                            <li><b>Account Name:</b> Legacy for African Women and Children Initiative</li>
+                            <li><b>Branch Name:</b> Koita Complex; P.O. Box 150 Juba</li>
+                            <li><b>Account Number (USD):</b> 6940016641 <button onclick="copyText('6940016641')"><i class="fas fa-copy"></i></button></li>
+                            <li><b>Account Number (SSP):</b> 0010087702212801 <button onclick="copyText('0010087702212801')"><i class="fas fa-copy"></i></button></li>
+                            <li><b>SWIFT Code:</b> ECOCSSJB <button onclick="copyText('ECOCSSJB')"><i class="fas fa-copy"></i></button></li>
+                        </ul>
+                    </li>
+                    <li><strong>For International Transfers, Provide Correspondent Bank Details:</strong>
+                        <ul>
+                            <li><b>Correspondent Bank:</b> Citibank New York <button onclick="copyText('Citibank New York')"><i class="fas fa-copy"></i></button></li>
+                            <li><b>SWIFT Code:</b> CITIUS33 <button onclick="copyText('CITIUS33')"><i class="fas fa-copy"></i></button></li>
+                        </ul>
+                    </li>
+                    <li><strong>Specify the Donation Amount:</strong>
+                        <ul>
+                            <li>Enter the amount you wish to donate in USD or SSP.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Add a Transfer Description:</strong>
+                        <ul>
+                            <li>Include your <b>full name</b> and <b>email address</b> for receipt purposes.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Review and Confirm:</strong>
+                        <ul>
+                            <li>Double-check all entered information for accuracy.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Complete the Transfer:</strong>
+                        <ul>
+                            <li>Submit the transfer and note any reference numbers provided.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p style="font-weight: bold;">Thank you for your generous support! Your contribution makes a significant difference.</p>
+            </div>
+        </div>
+    
+
+        <!-- Hidden fields for PayPal -->
+        <div id="paypal-fields" class="payment-fields" style="display:none;">
+            <p>Paypal  intergrtation is being worked on by our development team </p>
+        </div>
+
+        <!-- Hidden fields for Mobile Money -->
+        <div id="mobile-money-fields" class="payment-fields" style="display:none;">
+            <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number" />
+            <p>Mobile Money Payment is being worked on by our development team </p>
+        </div>
+
+        <!-- Hidden fields for Visa -->
+        <div id="visa-fields" class="payment-fields" style="display:none;">
+            <input type="text" class="form-control" name="card_number" placeholder="Card Number" required="required" />
+            <input type="text" class="form-control" name="expiry_date" placeholder="Expiry Date (MM/YY)" required="required" />
+            <input type="text" class="form-control" name="cvv" placeholder="CVV" required="required" />
+        </div>
+
+    </form>
+</div>
+<!-- Donate End -->
 
 
         <!-- Footer Start -->
@@ -251,5 +317,50 @@
 
         <!-- Template Javascript -->
         <script src="{% static 'js/main.js' %}"></script>
+        
+<script>
+    function copyText(text) {
+        // Create a temporary input element
+        var tempInput = document.createElement("input");
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        
+        try {
+            // Try copying the text to clipboard
+            var successful = document.execCommand("copy");
+            if (successful) {
+                alert("Copied to clipboard: " + text);
+            } else {
+                alert("Failed to copy text. Please try again.");
+            }
+        } catch (err) {
+            alert("An error occurred: " + err);
+        }
+        
+        // Remove the temporary input element
+        document.body.removeChild(tempInput);
+    }
+    
+    document.getElementById('payment-method').addEventListener('change', function() {
+        var selectedMethod = this.value;
+        document.querySelectorAll('.payment-fields').forEach(function(field) {
+            field.style.display = 'none';
+        });
+        if (selectedMethod === 'bank_transfer') {
+            document.getElementById('bank-transfer-fields').style.display = 'block';
+        } else if (selectedMethod === 'paypal') {
+            document.getElementById('paypal-fields').style.display = 'block';
+        } else if (selectedMethod === 'mobile_money') {
+            document.getElementById('mobile-money-fields').style.display = 'block';
+        } else if (selectedMethod === 'visa') {
+            document.getElementById('visa-fields').style.display = 'block';
+        }
+    });
+
+    // Show bank details as the default option
+    document.getElementById('bank-transfer-fields').style.display = 'block';
+</script>
+
     </body>
 </html>
