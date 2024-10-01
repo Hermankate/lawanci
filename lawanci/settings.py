@@ -139,3 +139,4 @@ MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
 # paypal configurations for making donations
 PAYPAL_RECIEVER_EMAIL = 'hermankats16@gmail.com'# email required to be put
 PAYPAL_TEST = True
+
