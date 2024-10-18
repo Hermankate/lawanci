@@ -5,8 +5,6 @@
         <meta charset="utf-8">
         <title>LAWANCI -legacy for african women and children initiative</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
         <link href="{% static 'img/favicon.ico' %}" rel="icon">
@@ -46,10 +44,10 @@
                     <div class="col-md-4">
                         <div class="top-bar-right">
                             <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a target="_blank" href="https://www.facebook.com/lawancingo?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -119,7 +117,7 @@
                         <div class="carousel-text">
                             <h1>Get Involved with helping hand</h1>
                             <p>
-                                Stakeholders meeting with women advocacy groups of greater Gogrial
+                                Stakeholders meeting with women advocacy groups of Greater Gogrial
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="{% url 'donate' %}">Donate Now</a>
@@ -134,7 +132,7 @@
                         <div class="carousel-text">
                             <h1>Let's be kind for children</h1>
                             <p>
-                                Bringing hope and nourishment to the future—members of Lawanci sharing a meal with the children we care for
+                                Helping children in need, and providing them with the essential resources they need to thrive.
                             </p>
                             <div class="carousel-btn">
                                  <a class="btn btn-custom" href="{% url 'donate' %}">Donate Now</a> <!--DWRcNpR6Kdc -->
@@ -184,7 +182,7 @@
                                     <a class="nav-link active" data-toggle="pill" href="#tab-content-1">Mission</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="pill" href="#tab-content-2">Vission</a>
+                                    <a class="nav-link" data-toggle="pill" href="#tab-content-2">Vision</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="pill" href="#tab-content-3">About</a>
@@ -891,8 +889,8 @@
                                 </p>
                             </div>
                             <div class="blog-meta">
-                                <p><i class="fa fa-user"></i><a href="">Admin</a></p>
-                                <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
+                                <p><i class="fa fa-user"></i><a href="#">Admin</a></p>
+                                <p><i class="fa fa-comments"></i><a href="#">15 Comments</a></p>
                             </div>
                         </div>
                     </div>
@@ -936,7 +934,7 @@
                                 <img src="{% static 'img/org.jpg' %}" alt="Image">
                             </div>
                             <div class="blog-text">
-                                <h3><a href="#">workshop to empower and strengthen women</a></h3>
+                                <h3><a href="#">Workshop to empower and strengthen women</a></h3>
                                 <p>
                                     LAWANCI organized a workshop to empower and strengthen women participation in policy making within juba in November 2023 under the power of voices project
                                 </p>
@@ -997,7 +995,7 @@
                             <h2>Our Head Office</h2>
                             <p><i class="fa fa-map-marker-alt"></i>P.O Box 351, Jub Plot No.167, Blipam Road, South Sudan</p>
                             <p><i class="fa fa-phone-alt"></i>+211(0)915 112 643</p>
-                            <p><i class="fa fa-envelope"></i>info@example.com</p>
+                            <p><i class="fa fa-envelope"></i>info@lawanci.org</p>
                             <div class="footer-social">
                                 <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-custom" target="_blank" href="https://www.facebook.com/lawancingo?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
@@ -1010,8 +1008,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Popular Links</h2>
-                            <a href="">About Us</a>
-                            <a href="">Contact Us</a>
+                            <a href="{% url 'about' %}">About Us</a>
+                            <a href="{% url 'contact' %}">Contact Us</a>
                             <a href="">Popular Causes</a>
                             <a href="">Upcoming Events</a>
                             <a href="">Latest Blog</a>

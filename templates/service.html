@@ -5,8 +5,6 @@
         <meta charset="utf-8">
         <title>LAWANCI -legacy for african women and children initiative</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
         <link href="{% static 'img/favicon.ico' %}" rel="icon">
@@ -34,7 +32,7 @@
                         <div class="top-bar-left">
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <p>+123 456 7890</p>
+                                <p>+211(0)915 112 643</p>
                             </div>
                             <div class="text">
                                 <i class="fa fa-envelope"></i>
@@ -83,7 +81,7 @@
                                 <a href="{% url 'volunteer' %}" class="dropdown-item">Become A Volunteer</a>
                             </div>
                         </div>
-                        <a href="{% url 'index' %}" class="nav-item nav-link">Contact</a>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </div>
@@ -347,7 +345,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-9">
-                <h2>Call for Action</h2>
+                <h2>Call To Action</h2>
                 <p>Help us make a lasting impact by contributing to our cause. Whether it's through donations, volunteering, or spreading awareness, your support is crucial in reaching the communities that need us the most.</p>
             </div>
             <div class="col-md-3 text-center">
@@ -462,8 +460,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Popular Links</h2>
-                            <a href="">About Us</a>
-                            <a href="">Contact Us</a>
+                            <a href="{% url 'about' %}">About Us</a>
+                            <a href="{% url 'contact' %}">Contact Us</a>
                             <a href="">Popular Causes</a>
                             <a href="">Upcoming Events</a>
                             <a href="">Latest Blog</a>
